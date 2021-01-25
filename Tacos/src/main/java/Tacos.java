@@ -26,6 +26,6 @@ public class Tacos {
         
         int totalCompra = ((TACOS * cantidadTacos) + (REFRESCOS * cantidadRefrescos));
         System.out.println("El total por tu compra es:");
-        System.out.println("$"+ totalCompra);
+        System.out.println("$" + totalCompra);
     }
 }
