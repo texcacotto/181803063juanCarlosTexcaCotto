@@ -12,13 +12,16 @@ import java.util.Scanner;
  * @author charl
  */
 public class SiEntonces {
-    static void main (String[] args) {
-        Scanner scanner = new Scanner (System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresa un número:");
         int numero = scanner.nextInt();
-        if (numero>0)
-            System.out.println("+");
+        if(numero == 0)
+            System.out.println("¡El número es neutro!");
         else
-            System.out.println("-");
+            if(numero > 0)
+                System.out.println("¡El número es positivo!");
+            else    
+                System.out.println("¡El número es negativo!");
     }
 }

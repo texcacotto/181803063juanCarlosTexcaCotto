@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Promedio {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresa un primer número:");
         double numeroUno = scanner.nextDouble();
         System.out.println("Ingresa un segundo número:");
@@ -21,7 +21,6 @@ public class Promedio {
         System.out.println("Ingresa un tercer número:");
         double numeroTres = scanner.nextDouble();
         double sumaNumeros = (numeroUno + numeroDos + numeroTres);
-        System.out.println("El promedio es:");
-        System.out.println(sumaNumeros / 3);
+        System.out.println("El promedio es: " + (sumaNumeros / 3));
     }
 }

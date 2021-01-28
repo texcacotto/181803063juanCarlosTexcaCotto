@@ -11,14 +11,15 @@ import java.util.Scanner;
  *
  * @author charl
  */
-public class CicloFor {
+public class CicloWhile {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa un número límite para la serie:");
+        System.out.println("Ingresa un número inicial para la cuenta regresiva:");
         int numeroSerie = scanner.nextInt();
-        System.out.println("Esta es la serie:");
-        for(int i = 0; i <= numeroSerie; i++) {
-            System.out.println(i);
+        System.out.println("Esta es la cuenta regresiva:");
+        while(numeroSerie >= 0) {
+            System.out.println(numeroSerie);
+            numeroSerie--;
         }
     }
 }
