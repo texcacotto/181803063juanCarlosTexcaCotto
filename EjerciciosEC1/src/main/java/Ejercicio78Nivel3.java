@@ -23,6 +23,22 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
  */
 public class Ejercicio78Nivel3 {
     public static void main(String[] args) {
+        int numero, exp, digito;
+        double binario;
+        Scanner scanner = new Scanner(System.in);
+ 
+        System.out.println("Introduce un numero entero >= 0: ");                                                
+        numero = scanner.nextInt();
         
+
+        exp=0;
+        binario=0;
+        while(numero!=0){
+                digito = numero % 2;           
+                binario = binario + digito * Math.pow(10, exp);                                                   
+                exp++;
+                numero = numero/2;
+        }
+        System.out.printf("Binario: %.0f %n", binario);
     }
 }
