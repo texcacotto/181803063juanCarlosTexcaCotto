@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,7 +14,6 @@ por ejemplo, si coloca el número 2 debería imprimir:
 00
 01
 10
-11
 https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/EjerciciosEC1/src/main/java/Ejercicio78Nivel3.java
 */
 
@@ -20,5 +22,7 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
  * @author charl
  */
 public class Ejercicio78Nivel3 {
-    
+    public static void main(String[] args) {
+        
+    }
 }
