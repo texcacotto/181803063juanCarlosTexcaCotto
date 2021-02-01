@@ -22,7 +22,7 @@ public class Ejercicio46Nivel2 {
     public static void main(String[] args) {
         int [] arreglo = new int[3];
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa 3 números:");
+        System.out.println("Ingresa 3 números por separado:");
         for(int i = 0; i < arreglo.length; i++) {
             arreglo[i] = scanner.nextInt();
         }

@@ -22,7 +22,7 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class Ejercicio27Nivel1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa el precio de los 3 productos:");
+        System.out.println("Ingresa el precio de c/u de los 3 productos:");
         double productoUno = scanner.nextDouble();
         double productoDos = scanner.nextDouble();
         double productoTres = scanner.nextDouble();

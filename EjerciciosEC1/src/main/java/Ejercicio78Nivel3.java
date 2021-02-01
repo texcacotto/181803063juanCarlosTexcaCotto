@@ -8,10 +8,11 @@
 Un programa que solicite un número mayor que 1,
 e imprima la tabla de verdad de dicho número,
 por ejemplo, si coloca el número 2 debería imprimir:
-11
-10
-01
 00
+01
+10
+11
+https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/EjerciciosEC1/src/main/java/Ejercicio78Nivel3.java
 */
 
 /**
