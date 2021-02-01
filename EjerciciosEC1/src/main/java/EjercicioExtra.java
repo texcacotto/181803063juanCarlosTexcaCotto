@@ -23,11 +23,11 @@ public class EjercicioExtra {
         System.out.println("Ingresa el número de filas:");
         int numeroFilas = scanner.nextInt();
         System.out.println("Resultado:");
-        for(int altura = 1; altura <= numeroFilas; altura++) {
-            for(int espacios = 1; espacios <= numeroFilas - altura; espacios++) {
+        for(int i = 1; i <= numeroFilas; i++) {
+            for(int espacios = 1; espacios <= numeroFilas - i; espacios++) {
                 System.out.print(" ");
             }
-            for(int gatos = 1; gatos <= (altura * 2) - 1; gatos++) {
+            for(int gatos = 1; gatos <= (i * 2) - 1; gatos++) {
                 System.out.print("#");
             }
             System.out.println();
