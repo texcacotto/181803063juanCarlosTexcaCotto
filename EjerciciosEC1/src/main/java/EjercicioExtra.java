@@ -21,10 +21,10 @@ public class EjercicioExtra {
      public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresa el número de filas:");
-        int numeroFilas = scanner.nextInt();
+        int filas = scanner.nextInt();
         System.out.println("Resultado:");
-        for(int i = 1; i <= numeroFilas; i++) {
-            for(int espacios = 1; espacios <= numeroFilas - i; espacios++) {
+        for(int i = 1; i <= filas; i++) {
+            for(int espacios = 1; espacios <= filas - i; espacios++) {
                 System.out.print(" ");
             }
             for(int gatos = 1; gatos <= (i * 2) - 1; gatos++) {

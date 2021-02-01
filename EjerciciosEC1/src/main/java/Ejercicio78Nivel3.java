@@ -1,4 +1,5 @@
 
+import java.util.Formatter;
 import java.util.Scanner;
 
 /*
@@ -25,16 +26,22 @@ public class Ejercicio78Nivel3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresa un número:");                                                
-        int numero = scanner.nextInt();
+        int decimal = scanner.nextInt();
         System.out.println("Resultado:");
-        double binario = 0;
-        int exponente = 0;
-        while(numero != 0) {
-            int residuo = numero % 2;           
-            binario = binario + residuo * Math.pow(10, exponente);                                                   
-            exponente++;
-            numero = numero / 2;
+        for(int i = 0; i <= decimal; i++) {
+            int turno = i;
+            double resultado = 0;
+            int exponente = 0;
+            while(turno != 0) {
+                int residuo = turno % 2;           
+                resultado = resultado + residuo * Math.pow(10, exponente);
+                exponente++;
+                turno = turno / 2;
+            }
+            Formatter formatter = new Formatter();
+            int binario = (int) resultado;
+            String cadenaNumeros = String.valueOf(formatter.format("%08d", binario));
+            System.out.println(cadenaNumeros);
         }
-        System.out.printf("%.0f %n", binario);
     }
 }

@@ -21,12 +21,12 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class Ejercicio46Nivel2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int [] arreglo = new int[3];
+        int [] arregloNumeros = new int [3];
         System.out.println("Ingresa 3 números por separado:");
-        for(int i = 0; i < arreglo.length; i++) {
-            arreglo[i] = scanner.nextInt();
+        for(int i = 0; i < arregloNumeros.length; i++) {
+            arregloNumeros[i] = scanner.nextInt();
         }
-        Arrays.sort(arreglo);
-        System.out.println("Resultado:\n" + Arrays.toString(arreglo));
+        Arrays.sort(arregloNumeros);
+        System.out.println("Resultado:\n" + Arrays.toString(arregloNumeros));
     }
 }

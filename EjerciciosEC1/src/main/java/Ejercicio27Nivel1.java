@@ -23,10 +23,10 @@ public class Ejercicio27Nivel1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresa el precio de c/u de los 3 productos:");
-        double productoUno = scanner.nextDouble();
-        double productoDos = scanner.nextDouble();
-        double productoTres = scanner.nextDouble();
-        double subtotal = (productoUno + productoDos + productoTres);
+        double precioUno = scanner.nextDouble();
+        double precioDos = scanner.nextDouble();
+        double precioTres = scanner.nextDouble();
+        double subtotal = (precioUno + precioDos + precioTres);
         System.out.println("Subtotal:\n$" + subtotal);
         double iva = (subtotal * 0.16);
         System.out.println("IVA:\n$" + iva);

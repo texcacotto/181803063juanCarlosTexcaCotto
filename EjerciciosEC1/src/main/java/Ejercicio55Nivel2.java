@@ -23,12 +23,12 @@ public class Ejercicio55Nivel2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresa la cantidad de visitas que has hecho:");
-        int cantidadVisitas = scanner.nextInt();
-        if(cantidadVisitas > 18) {
+        int visitas = scanner.nextInt();
+        if(visitas > 18) {
             System.out.println("¡Te corresponde una tarjeta Premium!");
         }
         else {
-            if(cantidadVisitas >= 10) {
+            if(visitas >= 10) {
                 System.out.println("¡Te corresponde una tarjeta Dorada!");
             }
             else {
