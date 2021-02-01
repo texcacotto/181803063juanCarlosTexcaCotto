@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 /*
 En Cinépolis existen 3 tipos de tarjeta,
-para la premium debes contar con más de 18 visitas,
-para la dorada debes contar con 10 visitas mínimo,
-y para la roja debes contar con menos de 10 visitas.
+para la Premium debes contar con más de 18 visitas,
+para la Dorada debes contar con 10 visitas mínimo,
+y para la Roja debes contar con menos de 10 visitas.
 https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/EjerciciosEC1/src/main/java/Ejercicio55Nivel2.java
 */
 
@@ -25,14 +25,14 @@ public class Ejercicio55Nivel2 {
         System.out.println("Ingresa la cantidad de visitas que has hecho:");
         int cantidadVisitas = scanner.nextInt();
         if(cantidadVisitas > 18) {
-            System.out.println("¡Te corresponde una tarjeta premium!");
+            System.out.println("¡Te corresponde una tarjeta Premium!");
         }
         else {
             if(cantidadVisitas >= 10) {
-                System.out.println("¡Te corresponde una tarjeta dorada!");
+                System.out.println("¡Te corresponde una tarjeta Dorada!");
             }
             else {
-                System.out.println("¡Te corresponde una tarjeta roja!");
+                System.out.println("¡Te corresponde una tarjeta Roja!");
             }
         }
     }
