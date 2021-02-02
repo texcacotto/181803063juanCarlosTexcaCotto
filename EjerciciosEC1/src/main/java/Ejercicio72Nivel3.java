@@ -25,21 +25,19 @@ public class Ejercicio72Nivel3 {
         int MINIMO = 1;
         int rango = (MAXIMO - MINIMO) + 1;
         int aleatorio = (int) (Math.random() * rango) + MINIMO;
-        System.out.println("¡Número aleatorio preparado!\n¿Cuál número podría ser?");
+        System.out.println("\n¡Número aleatorio preparado!\n¿Cuál número podría ser?");
         int i = 0;
         while(i != aleatorio) {
             int propuesta = scanner.nextInt();
             if(propuesta > aleatorio) {
-                System.out.println("¡Debe ser menor!");
+                System.out.println("\n¡Debe ser menor!");
             }
-            else {
-                if(propuesta < aleatorio) {
-                    System.out.println("¡Debe ser mayor!");
-                }
-                else {
-                    System.out.println("¡Descubriste el número aleatorio!");
-                    i = propuesta;
-                }
+            if(propuesta == aleatorio) {
+                System.out.println("\n¡Descubriste el número aleatorio!");
+                i = propuesta;
+            }
+            if(propuesta < aleatorio) {
+                System.out.println("\n¡Debe ser mayor!");
             }
         }
     }

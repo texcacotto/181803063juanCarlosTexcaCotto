@@ -22,15 +22,15 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class Ejercicio27Nivel1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa el precio de c/u de los 3 productos:");
+        System.out.println("\nIngresa el precio de c/u de los 3 productos:");
         double precioUno = scanner.nextDouble();
         double precioDos = scanner.nextDouble();
         double precioTres = scanner.nextDouble();
         double subtotal = (precioUno + precioDos + precioTres);
-        System.out.println("Subtotal:\n$" + subtotal);
+        System.out.printf("\nSubtotal:\n$%.2f", subtotal);
         double iva = (subtotal * 0.16);
-        System.out.println("IVA:\n$" + iva);
+        System.out.printf("\nIVA:\n$%.2f", iva);
         double totalCompra = (subtotal + iva);
-        System.out.println("Total de la compra:\n$" + totalCompra);
+        System.out.printf("\nTotal de la compra:\n$%.2f", totalCompra);
     }
 }

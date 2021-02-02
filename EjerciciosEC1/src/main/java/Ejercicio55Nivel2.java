@@ -22,18 +22,16 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class Ejercicio55Nivel2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa la cantidad de visitas que has hecho:");
+        System.out.println("\nIngresa la cantidad de visitas que has hecho:");
         int visitas = scanner.nextInt();
         if(visitas > 18) {
-            System.out.println("¡Te corresponde una tarjeta Premium!");
+            System.out.println("\n¡Te corresponde una tarjeta Premium!");
         }
-        else {
-            if(visitas >= 10) {
-                System.out.println("¡Te corresponde una tarjeta Dorada!");
-            }
-            else {
-                System.out.println("¡Te corresponde una tarjeta Roja!");
-            }
+        if(visitas >= 10 && visitas <= 18) {
+            System.out.println("\n¡Te corresponde una tarjeta Dorada!");
+        }
+        if(visitas < 10) {
+            System.out.println("\n¡Te corresponde una tarjeta Roja!");
         }
     }
 }

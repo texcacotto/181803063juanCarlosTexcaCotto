@@ -20,9 +20,9 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class Ejercicio81Nivel3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa tu edad:");
+        System.out.println("\nIngresa tu edad:");
         int edad = scanner.nextInt();
-        System.out.println("Resultado:");
+        System.out.println("\nResultado:");
         for(int i = 1; i <= edad; i++) {
             System.out.println(i);
         }

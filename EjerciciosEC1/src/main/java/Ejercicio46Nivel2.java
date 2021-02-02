@@ -22,11 +22,11 @@ public class Ejercicio46Nivel2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int [] arregloNumeros = new int [3];
-        System.out.println("Ingresa 3 números por separado:");
+        System.out.println("\nIngresa 3 números por separado:");
         for(int i = 0; i < arregloNumeros.length; i++) {
             arregloNumeros[i] = scanner.nextInt();
         }
         Arrays.sort(arregloNumeros);
-        System.out.println("Resultado:\n" + Arrays.toString(arregloNumeros));
+        System.out.println("\nResultado:\n" + Arrays.toString(arregloNumeros));
     }
 }

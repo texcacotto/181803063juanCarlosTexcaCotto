@@ -20,9 +20,9 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class EjercicioExtra {
      public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa el número de filas:");
+        System.out.println("\nIngresa el número de filas:");
         int filas = scanner.nextInt();
-        System.out.println("Resultado:");
+        System.out.println("\nResultado:");
         for(int i = 1; i <= filas; i++) {
             for(int espacios = 1; espacios <= filas - i; espacios++) {
                 System.out.print(" ");

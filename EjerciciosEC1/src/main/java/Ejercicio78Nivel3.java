@@ -12,9 +12,9 @@ import java.util.Scanner;
 Un programa que solicite un número mayor que 1,
 e imprima la tabla de verdad de dicho número,
 por ejemplo, si coloca el número 2 debería imprimir:
-00
-01
-10
+    00
+    01
+    10
 https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/EjerciciosEC1/src/main/java/Ejercicio78Nivel3.java
 */
 
@@ -25,9 +25,9 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class Ejercicio78Nivel3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingresa un número:");                                                
+        System.out.println("\nIngresa un número:");                                                
         int decimal = scanner.nextInt();
-        System.out.println("Resultado:");
+        System.out.println("\nResultado:");
         for(int i = 0; i <= decimal; i++) {
             int turno = i;
             double resultado = 0;
