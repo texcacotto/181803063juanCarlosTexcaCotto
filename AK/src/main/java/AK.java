@@ -16,7 +16,7 @@ public class AK {
     //Métodos
     @Override
     public String toString() {
-        return "\nMaterial del arma: " + material +
+        return "\nMaterial: " + material +
                 "\nDisponibilidad: " + disponibilidad +
                 "\nMunición: " + municion +
                 "\nVelocidad de disparo: " + velocidadDisparo +
