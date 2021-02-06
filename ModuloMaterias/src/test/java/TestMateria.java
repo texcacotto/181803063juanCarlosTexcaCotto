@@ -7,6 +7,10 @@ import java.util.Scanner;
  * and open the template in the editor.
  */
 
+/*
+https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/ModuloMaterias/src/test/java/TestMateria.java
+*/
+
 /**
  *
  * @author charl

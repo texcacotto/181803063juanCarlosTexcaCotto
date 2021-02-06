@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 
+/*
+https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/ModuloMaterias/src/main/java/Materia.java
+*/
+
 /**
  *
  * @author charl
@@ -32,10 +36,10 @@ public class Materia {
     //Método toString
     @Override
     public String toString() {
-        return "\nMateria: " + nombreMateria +
+        return "\nNombre de la materia: " + nombreMateria +
                 "\nCarrera: " + carrera +
                 "\nCréditos: " + creditos +
                 "\nCódigo: " + codigoMateria +
-                "\nCuatrimestre: " +  cuatrimestre;
+                "\nCuatrimestre: " + cuatrimestre;
     }
 }
