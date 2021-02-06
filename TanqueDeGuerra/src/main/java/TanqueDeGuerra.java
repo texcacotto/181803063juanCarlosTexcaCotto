@@ -4,6 +4,11 @@
  * and open the template in the editor.
  */
 
+/*
+Creación de clase de objeto propuesto, en infografía de objetivos de POO.
+https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/TanqueDeGuerra/src/main/java/TanqueDeGuerra.java
+*/
+
 /**
  *
  * @author charl
