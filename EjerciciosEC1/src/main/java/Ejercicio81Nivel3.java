@@ -1,4 +1,5 @@
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 /*
@@ -20,11 +21,24 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class Ejercicio81Nivel3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Calendar fecha = Calendar.getInstance();
+        int anioActual = fecha.get(Calendar.YEAR);
         System.out.println("\nIngresa tu edad:");
         int edad = scanner.nextInt();
+        int anioNacimiento = (anioActual - edad);
+        System.out.println("¿Cumpliste años en el transcurso del " + anioActual + "?");
+        System.out.println("Ingresa: 1 para Sí / 2 para No");
+        int respuesta = scanner.nextInt();
         System.out.println("\nResultado:");
-        for(int i = 1; i <= edad; i++) {
-            System.out.println(i);
+        if(respuesta == 1) {
+            for(int i = anioNacimiento; i <= anioActual; i++) {
+                System.out.println(i);
+            }
+        }
+        else {
+            for(int i = (anioNacimiento - 1); i < anioActual; i++) {
+                System.out.println(i);
+            }
         }
     }
 }
