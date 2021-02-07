@@ -1,5 +1,4 @@
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -21,12 +20,38 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/Ejercici
 public class Ejercicio46Nivel2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int [] arregloNumeros = new int [3];
-        System.out.println("\nIngresa 3 números por separado:");
-        for(int i = 0; i < arregloNumeros.length; i++) {
-            arregloNumeros[i] = scanner.nextInt();
+        System.out.println("\nIngresa un primer número:");
+        int numeroUno = scanner.nextInt();
+        System.out.println("Ingresa un segundo número:");
+        int numeroDos = scanner.nextInt();
+        System.out.println("Ingresa un tercer número:");
+        int numeroTres = scanner.nextInt();     
+        System.out.println("\nResultado:");
+        if(numeroUno > numeroDos) {
+            if(numeroUno > numeroTres) {
+                if(numeroDos > numeroTres) {
+                    System.out.println(numeroTres + ", " + numeroDos + ", " + numeroUno);
+                }
+                else {
+                    System.out.println(numeroDos + ", " + numeroTres + ", " + numeroUno);
+                }
+            }
+            else {
+                System.out.println(numeroDos + ", " + numeroUno + ", " + numeroTres);
+            }
         }
-        Arrays.sort(arregloNumeros);
-        System.out.println("\nResultado:\n" + Arrays.toString(arregloNumeros));
+        else {
+            if(numeroDos > numeroTres) {
+                if(numeroUno > numeroTres) {
+                    System.out.println(numeroTres + ", " + numeroUno + ", " + numeroDos);
+                }
+                else {
+                    System.out.println(numeroUno + ", " + numeroTres + ", " + numeroDos);
+                }              
+            }
+            else {
+                System.out.println(numeroUno + ", " + numeroDos + ", " + numeroTres);
+            }
+        }
     }
 }
