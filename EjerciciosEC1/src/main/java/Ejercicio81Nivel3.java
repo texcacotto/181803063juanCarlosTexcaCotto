@@ -25,20 +25,20 @@ public class Ejercicio81Nivel3 {
         int anioActual = fecha.get(Calendar.YEAR);
         System.out.println("\nIngresa tu edad:");
         int edad = scanner.nextInt();
-        int anioNacimiento = (anioActual - edad);
         System.out.println("¿Cumpliste años en el transcurso del " + anioActual + "?");
         System.out.println("Ingresa: 1 para Sí / 2 para No");
         int respuesta = scanner.nextInt();
         System.out.println("\nResultado:");
+        int primerCumple = 0;
         if(respuesta == 1) {
-            for(int i = anioNacimiento; i <= anioActual; i++) {
-                System.out.println(i);
-            }
+            primerCumple = (anioActual - edad) + 1;
         }
-        else {
-            for(int i = (anioNacimiento - 1); i < anioActual; i++) {
-                System.out.println(i);
-            }
+        if(respuesta == 2) {
+            primerCumple = (anioActual - edad);
+            anioActual = (anioActual - 1);
+        }
+        for(int i = primerCumple; i <= anioActual; i++) {
+            System.out.println(i);
         }
     }
 }
