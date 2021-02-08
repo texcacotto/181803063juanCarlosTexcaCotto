@@ -15,13 +15,15 @@ https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/ModuloGa
 public class Galleta {
     //Atributos
     public String codigo, nombre, marca, tipoEmpaque, fechaCaducidad;
+    double precio;
     public int contenidoNeto;
     //Métodos
     //Constructor completo
-    public Galleta(String codigo, String nombre, String marca, int contenidoNeto, String tipoEmpaque, String fechaCaducidad) {
+    public Galleta(String codigo, String nombre, String marca, double precio, int contenidoNeto, String tipoEmpaque, String fechaCaducidad) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.marca = marca;
+        this.precio = precio;
         this.contenidoNeto = contenidoNeto;
         this.tipoEmpaque = tipoEmpaque;
         this.fechaCaducidad = fechaCaducidad;
@@ -31,6 +33,7 @@ public class Galleta {
         this.codigo = "";
         this.nombre = "";
         this.marca = "";
+        this.precio = 0;
         this.contenidoNeto = 0;
         this.tipoEmpaque = "";
         this.fechaCaducidad = "";
@@ -41,7 +44,8 @@ public class Galleta {
         return "\nCódigo: " + codigo +
                 "\nNombre: " + nombre +
                 "\nMarca: " + marca +
-                "\nContenido neto: " + contenidoNeto +
+                "\nPrecio: " + precio +
+                "\nContenido neto (g): " + contenidoNeto +
                 "\nTipo de empaque: " + tipoEmpaque +
                 "\nFecha de caducidad: " + fechaCaducidad;
     }

@@ -25,7 +25,9 @@ public class TestGalleta {
         String nombre = scanner.nextLine();
         System.out.println("Marca:");
         String marca = scanner.nextLine();
-        System.out.println("Contenido neto (gr):");
+        System.out.println("Precio:");
+        double precio = scanner.nextDouble();
+        System.out.println("Contenido neto (g):");
         int contenidoNeto = scanner.nextInt();
         scanner.nextLine();
         System.out.println("Tipo de empaque (Bolsa/Caja):");
@@ -33,10 +35,10 @@ public class TestGalleta {
         System.out.println("Fecha de caducidad (dd/mm/aa):");
         String fechaCaducidad = scanner.nextLine();
         System.out.println("¡Producto guardado!");
-        Galleta galletaUno = new Galleta("", "", "", 0, "", "");
-        Galleta galletaDos = new Galleta("", "", "", 0, "", "");
-        Galleta galletaTres = new Galleta("", "", "", 0, "", "");
-        Galleta galletaCuatro = new Galleta(codigo, nombre, marca, contenidoNeto, tipoEmpaque, fechaCaducidad);
+        Galleta galletaUno = new Galleta("producto0001", "Marías Azucaradas", "Gamesa", 14, 150, "Bolsa", "15/Dic/2022");
+        Galleta galletaDos = new Galleta("producto0002", "Chokis Chocobase", "Gamesa", 13, 84, "Bolsa", "30/Nov/2021");
+        Galleta galletaTres = new Galleta("producto0003", "Besitos de Nuez", "Tía Rosa", 10, 70, "Bolsa", "01/Ene/2023");
+        Galleta galletaCuatro = new Galleta(codigo, nombre, marca, precio, contenidoNeto, tipoEmpaque, fechaCaducidad);
         System.out.println(galletaUno);
         System.out.println(galletaDos);
         System.out.println(galletaTres);
