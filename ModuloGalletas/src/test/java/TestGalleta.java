@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 
 /*
-
+https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/ModuloGalletas/src/test/java/TestGalleta.java
 */
 
 /**
@@ -18,27 +18,25 @@ import java.util.Scanner;
 public class TestGalleta {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\n¡Ingresa una nueva materia!");
-        System.out.println("Nombre:");
-        String nombreMateria = scanner.nextLine();
-        System.out.println("Carrera:");
-        String carrera = scanner.nextLine();
-        System.out.println("Créditos:");
-        int creditos = scanner.nextInt();
-        scanner.nextLine();
+        System.out.println("\n¡Ingresa un nuevo producto!");
         System.out.println("Código:");
-        String codigoMateria = scanner.nextLine();
-        System.out.println("Cuatrimestre:");
-        String cuatrimestre = scanner.nextLine();
-        System.out.println("¡Materia guardada!");
-        
-        
-        
-        
-        Galleta galletaUno = new Galleta(carrera, carrera, carrera, creditos, carrera, carrera);
-        Galleta galletaDos = new Galleta(carrera, carrera, carrera, creditos, carrera, carrera);
-        Galleta galletaTres = new Galleta(carrera, carrera, carrera, creditos, carrera, carrera);
-        Galleta galletaCuatro = new Galleta(carrera, carrera, carrera, creditos, carrera, carrera);
+        String codigo = scanner.nextLine();
+        System.out.println("Nombre:");
+        String nombre = scanner.nextLine();
+        System.out.println("Marca:");
+        String marca = scanner.nextLine();
+        System.out.println("Contenido neto (gr):");
+        int contenidoNeto = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Tipo de empaque (Bolsa/Caja):");
+        String tipoEmpaque = scanner.nextLine();
+        System.out.println("Fecha de caducidad (dd/mm/aa):");
+        String fechaCaducidad = scanner.nextLine();
+        System.out.println("¡Producto guardado!");
+        Galleta galletaUno = new Galleta("", "", "", 0, "", "");
+        Galleta galletaDos = new Galleta("", "", "", 0, "", "");
+        Galleta galletaTres = new Galleta("", "", "", 0, "", "");
+        Galleta galletaCuatro = new Galleta(codigo, nombre, marca, contenidoNeto, tipoEmpaque, fechaCaducidad);
         System.out.println(galletaUno);
         System.out.println(galletaDos);
         System.out.println(galletaTres);
