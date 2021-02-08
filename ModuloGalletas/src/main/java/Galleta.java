@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 
+/*
+https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/ModuloGalletas/src/main/java/Galleta.java
+*/
+
 /**
  *
  * @author charl
@@ -35,10 +39,10 @@ public class Galleta {
     @Override
     public String toString() {
         return "\nCódigo: " + codigo +
-                "\nNombre:" + nombre +
-                "\nMarca:" + marca +
-                "\nContenido neto:" + contenidoNeto +
-                "\nTipo de empaque:" + tipoEmpaque +
-                "\n:Fecha de caducidad:" + fechaCaducidad;
+                "\nNombre: " + nombre +
+                "\nMarca: " + marca +
+                "\nContenido neto: " + contenidoNeto +
+                "\nTipo de empaque: " + tipoEmpaque +
+                "\nFecha de caducidad: " + fechaCaducidad;
     }
 }
