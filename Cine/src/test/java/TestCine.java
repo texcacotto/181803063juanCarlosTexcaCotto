@@ -16,8 +16,6 @@ public class TestCine {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Pelicula> peliculas = new ArrayList();
-        //Pelicula peliculaRobocop = new Pelicula("Robocop");
-        //peliculas.add(peliculaRobocop);
         System.out.println("\n¿Quieres registrar una nueva película?");
         int respuesta = 0;
         while(respuesta != 2) {
@@ -31,9 +29,10 @@ public class TestCine {
                 peliculas.add(peliculaNueva);
             }
         }
+        Cine cineCinepolis = new Cine("Cinépolis", 10, 23, peliculas);
+        //System.out.println(cineCinepolis);
         System.out.println("\nPelículas registradas al momento: " + peliculas.size() + "\n");
-        Cine cine = new Cine("Cinépolis", 9, 21, peliculas);
-        System.out.println(cine.imprimirPeliculas());
+        System.out.println(cineCinepolis.imprimirPeliculas());
         /*
         Pelicula peliculaUno = new Pelicula("Black Widow");
         Pelicula peliculaDos = new Pelicula("Godzilla vs. Kong");

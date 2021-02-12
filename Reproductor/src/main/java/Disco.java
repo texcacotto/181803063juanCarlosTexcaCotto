@@ -29,6 +29,7 @@ public class Disco {
         this.nombre = "";
         this.artista = "";
         this.anio = 0;
+        this.canciones = null;
     }
     //Método toString
     @Override

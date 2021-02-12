@@ -43,7 +43,7 @@ public class Pelicula {
     //Método toString
     @Override
     public String toString() {
-        return "Título: " + titulo;
+        return "\nTítulo: " + titulo;
                 /*
                 "\nDirector: " + director +
                 "\nGénero: " + genero +
