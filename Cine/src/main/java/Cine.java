@@ -15,7 +15,7 @@ public class Cine {
     //Atributos
     public String nombre;
     public int horaApertura, horaCierre;
-    public ArrayList<Pelicula> peliculas;
+    public ArrayList<Pelicula> peliculas = new ArrayList();
     //Constructor completo
     public Cine(String nombre, int horaApertura, int horaCierre, ArrayList<Pelicula> peliculas) {
         this.nombre = nombre;
@@ -30,13 +30,19 @@ public class Cine {
         this.horaCierre = 0;
         this.peliculas = null;
     }
+    //Constructor extra
+    public Cine(String nombre, int horaApertura, int horaCierre) {
+        this.nombre = nombre;
+        this.horaApertura = horaApertura;
+        this.horaCierre = horaCierre;
+    }
     //Método toString
     @Override
     public String toString() {
         return "\nNombre: " + nombre +
                 "\nHora de apertura: " + horaApertura +
-                "\nHora de cierre: " + horaCierre +
-                "\nPelículas: " + peliculas;
+                "\nHora de cierre: " + horaCierre;
+                //"\nPelículas: " + peliculas;
     }
     //Método para imprimir las películas
     public String imprimirPeliculas() {
@@ -45,5 +51,9 @@ public class Cine {
             cartelera += pelicula.titulo + "\n";
         }
         return cartelera;
+    }
+    //Método para agregar las películas
+    public void agregarPeliculas(Pelicula peliculaNueva) {
+        peliculas.add(peliculaNueva);
     }
 }

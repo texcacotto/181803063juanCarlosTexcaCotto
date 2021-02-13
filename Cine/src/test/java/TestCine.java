@@ -1,5 +1,5 @@
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -15,23 +15,22 @@ import java.util.Scanner;
 public class TestCine {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Pelicula> peliculas = new ArrayList();
+        Cine cineCinepolis = new Cine("Cinépolis", 10, 23);
         System.out.println("\n¿Quieres registrar una nueva película?");
         int respuesta = 0;
+        String titulo;
         while(respuesta != 2) {
             System.out.println("\nIngresa:\n1 para Continuar / 2 para Salir");
             respuesta = scanner.nextInt();
             scanner.nextLine();
             if(respuesta == 1) {
                 System.out.println("Título:");
-                String titulo = scanner.nextLine();
+                titulo = scanner.nextLine();
                 Pelicula peliculaNueva = new Pelicula(titulo);
-                peliculas.add(peliculaNueva);
+                cineCinepolis.agregarPeliculas(peliculaNueva);
             }
         }
-        Cine cineCinepolis = new Cine("Cinépolis", 10, 23, peliculas);
-        //System.out.println(cineCinepolis);
-        System.out.println("\nPelículas registradas al momento: " + peliculas.size() + "\n");
+        //System.out.println("\nPelículas registradas al momento: " + cineCinepolis.peliculas.size() + "\n");
         System.out.println(cineCinepolis.imprimirPeliculas());
         /*
         Pelicula peliculaUno = new Pelicula("Black Widow");
