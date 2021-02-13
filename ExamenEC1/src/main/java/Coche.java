@@ -9,11 +9,11 @@
  * @author charl
  */
 public class Coche {
-    //
+    //Atributos
     public String marca, color, modelo;
     public double precio;
     public int matricula;
-    //
+    //Constructor completo
     public Coche(String marca, String color, String modelo, double precio, int matricula) {
         this.marca = marca;
         this.color = color;
@@ -21,7 +21,7 @@ public class Coche {
         this.precio = precio;
         this.matricula = matricula;
     }
-    //
+    //Constructor vacío
     public Coche() {
         this.marca = "";
         this.color = "";
@@ -29,7 +29,7 @@ public class Coche {
         this.precio = 0;
         this.matricula = 0;
     }
-    //
+    //Método toString
     @Override
     public String toString() {
         return "\nMarca: " + marca +
