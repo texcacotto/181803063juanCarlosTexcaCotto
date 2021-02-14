@@ -39,7 +39,7 @@ public class Cine {
     //Método toString
     @Override
     public String toString() {
-        return "\nNombre: " + nombre +
+        return "\nNombre del cine: " + nombre +
                 "\nHora de apertura: " + horaApertura +
                 "\nHora de cierre: " + horaCierre;
                 //"\nPelículas: " + peliculas;
@@ -55,5 +55,28 @@ public class Cine {
     //Método para agregar las películas
     public void agregarPeliculas(Pelicula peliculaNueva) {
         peliculas.add(peliculaNueva);
+    }
+    //Método para contar las películas
+    public String contarPeliculas() {
+        return "\nPelículas registradas al momento: " + peliculas.size() + "\n";
+    }
+    //Método para imprimir el menú de las películas
+    public String menuPeliculas() {
+       String menu = "";
+        int i = 1;
+        for(Pelicula pelicula : peliculas) { 
+            menu += i + ".- " + pelicula.titulo + "\n";
+            i ++;
+        }
+        return menu;  
+    }
+    //Método para consultar el horario del cine
+    public String consultarHorario(int consulta) {
+        if(consulta >= horaApertura & consulta < horaCierre) {
+            return "¡Abierto!";
+        }
+        else {
+            return "¡Cerrado!";
+        }
     }
 }

@@ -30,8 +30,14 @@ public class TestCine {
                 cineCinepolis.agregarPeliculas(peliculaNueva);
             }
         }
-        //System.out.println("\nPelículas registradas al momento: " + cineCinepolis.peliculas.size() + "\n");
-        System.out.println(cineCinepolis.imprimirPeliculas());
+        System.out.println("\n|¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯|");
+        System.out.println(cineCinepolis);
+        System.out.println(cineCinepolis.contarPeliculas());
+        System.out.println(cineCinepolis.menuPeliculas());
+        System.out.println("¿Quieres consultar el horario del cine?\nIngresa una hora (24h):");
+        int consulta = scanner.nextInt();
+        System.out.println(cineCinepolis.consultarHorario(consulta));
+        System.out.println("\n|________________________________________|\n");
         /*
         Pelicula peliculaUno = new Pelicula("Black Widow");
         Pelicula peliculaDos = new Pelicula("Godzilla vs. Kong");
