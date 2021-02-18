@@ -32,24 +32,24 @@ public class RAM {
                 "\nLatencia (ns): " + latencia;
     }
     //
-   public int getCapacidad() {
+    public int getCapacidad() {
         return this.capacidad;
-    }
-    //
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
     }
     //
     public int getVelocidad() {
         return this.velocidad;
     }
     //
-    public void setVelocidad(int velocidad) {
-        this.velocidad = velocidad;
-    }
-    //
     public int getLatencia() {
         return this.latencia;
+    }
+    //
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+    //
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
     }
     //
     public void setLatencia(int latencia) {
