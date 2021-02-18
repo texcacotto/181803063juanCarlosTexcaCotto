@@ -21,5 +21,10 @@ public class TestRAM {
         sdram.setVelocidad(100);
         sdram.setLatencia(10);
         System.out.println(sdram);
+        //
+        System.out.println();
+        System.out.println(sdram.getCapacidad());
+        System.out.println(sdram.getVelocidad());
+        System.out.println(sdram.getLatencia());
     }
 }
