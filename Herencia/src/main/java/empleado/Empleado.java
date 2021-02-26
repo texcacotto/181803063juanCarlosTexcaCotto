@@ -39,15 +39,12 @@ public class Empleado {
     public String getNombre() {
         return this.nombre;
     }
-    //
     public String getApellidoPaterno() {
         return this.apellidoPaterno;
     }
-    //
     public String getApellidoMaterno() {
         return this.apellidoMaterno;
     }
-    //
     public int getDNI() {
         return this.dni;
     }
@@ -55,15 +52,12 @@ public class Empleado {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    //
     public void setApellidoPaterno(String apellidoPaterno) {
         this.apellidoPaterno = apellidoPaterno;
     }
-    //
     public void setApellidoMaterno(String apellidoMaterno) {
         this.apellidoMaterno = apellidoMaterno;
     }
-    //
     public void setDNI(int dni) {
         this.dni = dni;
     }
