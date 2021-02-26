@@ -25,7 +25,7 @@ public class Programador extends Empleado {
     //
     @Override
     public String toString() {
-        return "\nSueldo: " + sueldo;
+        return "\nSueldo: " + sueldo + super.toString();
     }
     //
     public int getSueldo() {
