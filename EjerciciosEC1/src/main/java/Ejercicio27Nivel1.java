@@ -1,0 +1,36 @@
+
+import java.util.Scanner;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/*
+Un programa que solicite el precio de 3 productos,
+e imprima el subtotal (la sumatoria del precio de los productos),
+el IVA (el subtotal por 0.16),
+y el total (la suma del subtotal y el IVA).
+https://github.com/texcacotto/181803063juanCarlosTexcaCotto/blob/master/EjerciciosEC1/src/main/java/Ejercicio27Nivel1.java
+*/
+
+/**
+ *
+ * @author charl
+ */
+public class Ejercicio27Nivel1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("\nIngresa el precio de c/u de los 3 productos:");
+        double precioUno = scanner.nextDouble();
+        double precioDos = scanner.nextDouble();
+        double precioTres = scanner.nextDouble();
+        double subtotal = (precioUno + precioDos + precioTres);
+        System.out.printf("\nSubtotal:\n$%.2f", subtotal);
+        double iva = (subtotal * 0.16);
+        System.out.printf("\nIVA:\n$%.2f", iva);
+        double totalCompra = (subtotal + iva);
+        System.out.printf("\nTotal de la compra:\n$%.2f", totalCompra);
+    }
+}
