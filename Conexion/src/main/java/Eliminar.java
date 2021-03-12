@@ -12,21 +12,18 @@ import java.util.Scanner;
  *
  * @author cotto
  */
-public class Insertar {
+public class Eliminar {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/usuarios?zeroDateTimeBehavior=CONVERT_TO_NULL";
         try {
             //Crear la conexion con la base de datos
             Connection conexion = DriverManager.getConnection(url, "admin", "12345");
-            String sql = "INSERT INTO usuario (nombre, password) VALUES (?, ?)";
+            String sql = "DELETE FROM usuario WHERE idUsuario = ?";
             PreparedStatement declaracion = conexion.prepareStatement(sql);
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Nombre:");
-            String nombre = scanner.nextLine();
-            System.out.println("Contraseña:");
-            String password = scanner.nextLine();
-            declaracion.setString(1, nombre);
-            declaracion.setString(2, password);
+            System.out.println("Ingresa el ID del usuario:");
+            int id = scanner.nextInt();
+            declaracion.setInt(1, id);
             declaracion.executeUpdate();
             //Cerrar toda conexion con la base de datos
             declaracion.close();

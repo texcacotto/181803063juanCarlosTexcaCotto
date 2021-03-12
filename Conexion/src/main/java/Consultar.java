@@ -11,7 +11,7 @@ import java.sql.*;
  *
  * @author charl
  */
-public class Conexion {
+public class Consultar {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/usuarios?zeroDateTimeBehavior=CONVERT_TO_NULL";
         try {
