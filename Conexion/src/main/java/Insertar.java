@@ -1,4 +1,5 @@
 
+import Conexion.Conexion;
 import java.sql.*;
 import java.util.Scanner;
 
@@ -14,10 +15,9 @@ import java.util.Scanner;
  */
 public class Insertar {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/usuarios?zeroDateTimeBehavior=CONVERT_TO_NULL";
         try {
             //Crear la conexion con la base de datos
-            Connection conexion = DriverManager.getConnection(url, "admin", "12345");
+            Connection conexion = Conexion.getConnection();
             String sql = "INSERT INTO usuario (nombre, password) VALUES (?, ?)";
             PreparedStatement declaracion = conexion.prepareStatement(sql);
             Scanner scanner = new Scanner(System.in);
@@ -29,8 +29,7 @@ public class Insertar {
             declaracion.setString(2, password);
             declaracion.executeUpdate();
             //Cerrar toda conexion con la base de datos
-            declaracion.close();
-            conexion.close();
+            Conexion.close(conexion, declaracion);
         }
         catch(SQLException ex) {
             ex.printStackTrace(System.out);

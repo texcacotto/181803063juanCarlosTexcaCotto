@@ -1,4 +1,5 @@
 
+import Conexion.Conexion;
 import java.sql.*;
 
 /*
@@ -13,28 +14,25 @@ import java.sql.*;
  */
 public class Consultar {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/usuarios?zeroDateTimeBehavior=CONVERT_TO_NULL";
         try {
             //Crear la conexion con la base de datos
-            Connection conexion = DriverManager.getConnection(url, "admin", "12345");
+            Connection conexion = Conexion.getConnection();
             //Crear la declaracion de como se va a trabajar con la base de datos
             Statement declaracion = conexion.createStatement();
-            String sql = "SELECT * FROM puesto";
+            String sql = "SELECT * FROM usuario";
             //Variable que recibira el resultado de ejecutar la sentencia SQL
             ResultSet resultado = declaracion.executeQuery(sql);
             //Imprimir valores
             while(resultado.next()) {
-                System.out.println(resultado.getInt("idPuesto"));
                 System.out.println(resultado.getInt("idUsuario"));
-                System.out.println(resultado.getString("puesto"));
-                System.out.println(resultado.getInt("sueldoSemana"));
-                System.out.println(resultado.getInt("horasDia"));
+                System.out.println(resultado.getString("nombre"));
+                System.out.println(resultado.getString("password"));
+                System.out.println(resultado.getInt("status"));
+                System.out.println(resultado.getString("fechaAlta"));
                 System.out.println();
             }
             //Cerrar toda conexion con la base de datos
-            resultado.close();
-            declaracion.close();
-            conexion.close();
+            Conexion.close(conexion, declaracion, resultado);
         }
         catch(SQLException ex) {
             ex.printStackTrace(System.out);

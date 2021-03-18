@@ -1,4 +1,5 @@
 
+import Conexion.Conexion;
 import java.sql.*;
 import java.util.Scanner;
 
@@ -14,10 +15,9 @@ import java.util.Scanner;
  */
 public class Actualizar {
     public static void main(String[] args) {
-        String url = "jdbc:mysql://localhost:3306/usuarios?zeroDateTimeBehavior=CONVERT_TO_NULL";
         try {
             //Crear la conexion con la base de datos
-            Connection conexion = DriverManager.getConnection(url, "admin", "12345");
+            Connection conexion = Conexion.getConnection();
             String sql = "UPDATE usuario SET nombre = ?, password = ?, status = ? WHERE idUsuario = ?";
             PreparedStatement declaracion = conexion.prepareStatement(sql);
             Scanner scanner = new Scanner(System.in);
@@ -36,8 +36,7 @@ public class Actualizar {
             declaracion.setInt(4, id);
             declaracion.executeUpdate();
             //Cerrar toda conexion con la base de datos
-            declaracion.close();
-            conexion.close();
+            Conexion.close(conexion, declaracion);
         }
         catch(SQLException ex) {
             ex.printStackTrace(System.out);
