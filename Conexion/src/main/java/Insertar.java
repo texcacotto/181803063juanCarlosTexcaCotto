@@ -14,25 +14,20 @@ import java.util.Scanner;
  * @author cotto
  */
 public class Insertar {
-    public static void main(String[] args) {
-        try {
-            //Crear la conexion con la base de datos
-            Connection conexion = Conexion.getConnection();
-            String sql = "INSERT INTO usuario (nombre, password) VALUES (?, ?)";
-            PreparedStatement declaracion = conexion.prepareStatement(sql);
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Nombre:");
-            String nombre = scanner.nextLine();
-            System.out.println("Contraseña:");
-            String password = scanner.nextLine();
-            declaracion.setString(1, nombre);
-            declaracion.setString(2, password);
-            declaracion.executeUpdate();
-            //Cerrar toda conexion con la base de datos
-            Conexion.close(conexion, declaracion);
-        }
-        catch(SQLException ex) {
-            ex.printStackTrace(System.out);
-        }
+    public static void main(String[] args) throws SQLException {
+        //Crear la conexion con la base de datos
+        Connection conexion = Conexion.getConnection();
+        String sql = "INSERT INTO usuario (nombre, password) VALUES (?, ?)";
+        PreparedStatement declaracion = conexion.prepareStatement(sql);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nombre:");
+        String nombre = scanner.nextLine();
+        System.out.println("Contraseña:");
+        String password = scanner.nextLine();
+        declaracion.setString(1, nombre);
+        declaracion.setString(2, password);
+        declaracion.executeUpdate();
+        //Cerrar toda conexion con la base de datos
+        Conexion.close(conexion, declaracion);
     }
 }

@@ -14,22 +14,17 @@ import java.util.Scanner;
  * @author cotto
  */
 public class Eliminar {
-    public static void main(String[] args) {
-        try {
-            //Crear la conexion con la base de datos
-            Connection conexion = Conexion.getConnection();
-            String sql = "DELETE FROM usuario WHERE idUsuario = ?";
-            PreparedStatement declaracion = conexion.prepareStatement(sql);
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Ingresa el ID del usuario:");
-            int id = scanner.nextInt();
-            declaracion.setInt(1, id);
-            declaracion.executeUpdate();
-            //Cerrar toda conexion con la base de datos
-            Conexion.close(conexion, declaracion);
-        }
-        catch(SQLException ex) {
-            ex.printStackTrace(System.out);
-        }
+    public static void main(String[] args) throws SQLException {
+        //Crear la conexion con la base de datos
+        Connection conexion = Conexion.getConnection();
+        String sql = "DELETE FROM usuario WHERE idUsuario = ?";
+        PreparedStatement declaracion = conexion.prepareStatement(sql);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa el ID del usuario:");
+        int id = scanner.nextInt();
+        declaracion.setInt(1, id);
+        declaracion.executeUpdate();
+        //Cerrar toda conexion con la base de datos
+        Conexion.close(conexion, declaracion);
     }
 }

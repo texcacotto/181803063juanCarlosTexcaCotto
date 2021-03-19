@@ -13,29 +13,24 @@ import java.sql.*;
  * @author charl
  */
 public class Consultar {
-    public static void main(String[] args) {
-        try {
-            //Crear la conexion con la base de datos
-            Connection conexion = Conexion.getConnection();
-            //Crear la declaracion de como se va a trabajar con la base de datos
-            Statement declaracion = conexion.createStatement();
-            String sql = "SELECT * FROM usuario";
-            //Variable que recibira el resultado de ejecutar la sentencia SQL
-            ResultSet resultado = declaracion.executeQuery(sql);
-            //Imprimir valores
-            while(resultado.next()) {
-                System.out.println(resultado.getInt("idUsuario"));
-                System.out.println(resultado.getString("nombre"));
-                System.out.println(resultado.getString("password"));
-                System.out.println(resultado.getInt("status"));
-                System.out.println(resultado.getString("fechaAlta"));
-                System.out.println();
-            }
-            //Cerrar toda conexion con la base de datos
-            Conexion.close(conexion, declaracion, resultado);
+    public static void main(String[] args) throws SQLException {
+        //Crear la conexion con la base de datos
+        Connection conexion = Conexion.getConnection();
+        //Crear la declaracion de como se va a trabajar con la base de datos
+        Statement declaracion = conexion.createStatement();
+        String sql = "SELECT * FROM usuario";
+        //Variable que recibira el resultado de ejecutar la sentencia SQL
+        ResultSet resultado = declaracion.executeQuery(sql);
+        //Imprimir valores
+        while(resultado.next()) {
+            System.out.println(resultado.getInt("idUsuario"));
+            System.out.println(resultado.getString("nombre"));
+            System.out.println(resultado.getString("password"));
+            System.out.println(resultado.getInt("status"));
+            System.out.println(resultado.getString("fechaAlta"));
+            System.out.println();
         }
-        catch(SQLException ex) {
-            ex.printStackTrace(System.out);
-        }
+        //Cerrar toda conexion con la base de datos
+        Conexion.close(conexion, declaracion, resultado);
     }
 }
