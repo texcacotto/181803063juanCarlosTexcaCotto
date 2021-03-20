@@ -21,6 +21,13 @@ public class Usuario {
         this.password = password;
         this.fechaAlta = fechaAlta;
     }
+    public Usuario(String nombre, String password) {
+        this.nombre = nombre;
+        this.password = password;
+    }
+    public Usuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
     public Usuario() {
     }
     @Override

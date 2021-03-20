@@ -1,6 +1,9 @@
 
-import Conexion.Conexion;
+//import Conexion.Conexion;
+import DaoUsuario.DaoUsuario;
+import Usuario.Usuario;
 import java.sql.*;
+import java.util.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,6 +17,12 @@ import java.sql.*;
  */
 public class Consultar {
     public static void main(String[] args) throws SQLException {
+        List<Usuario> usuarios = new ArrayList<>();
+        usuarios = DaoUsuario.listaUsuarios();
+        for(Usuario usuario : usuarios) {
+            System.out.println(usuario);
+        }
+        /*
         //Crear la conexion con la base de datos
         Connection conexion = Conexion.getConnection();
         //Crear la declaracion de como se va a trabajar con la base de datos
@@ -32,5 +41,6 @@ public class Consultar {
         }
         //Cerrar toda conexion con la base de datos
         Conexion.close(conexion, declaracion, resultado);
+        */
     }
 }
