@@ -21,6 +21,12 @@ public class Usuario {
         this.password = password;
         this.fechaAlta = fechaAlta;
     }
+    public Usuario(int idUsuario, int status, String nombre, String password) {
+        this.idUsuario = idUsuario;
+        this.status = status;
+        this.nombre = nombre;
+        this.password = password;
+    }
     public Usuario(String nombre, String password) {
         this.nombre = nombre;
         this.password = password;

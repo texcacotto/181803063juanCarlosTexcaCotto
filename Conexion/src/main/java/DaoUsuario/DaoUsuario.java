@@ -38,6 +38,17 @@ public class DaoUsuario {
         declaracion.executeUpdate();
         Conexion.close(conexion, declaracion);
     }
+    public static void actualizarUsuario(Usuario porActualizar) throws SQLException {
+        Connection conexion = Conexion.getConnection();
+        sql = "UPDATE usuario SET nombre = ?, password = ?, status = ? WHERE idUsuario = ?";
+        PreparedStatement declaracion = conexion.prepareStatement(sql);
+        declaracion.setString(1, porActualizar.getNombre());
+        declaracion.setString(2, porActualizar.getPassword());
+        declaracion.setInt(3, porActualizar.getStatus());
+        declaracion.setInt(4, porActualizar.getIdUsuario());
+        declaracion.executeUpdate();
+        Conexion.close(conexion, declaracion);
+    }
     public static void eliminarUsuario(Usuario porEliminar) throws SQLException {
         Connection conexion = Conexion.getConnection();
         sql = "DELETE FROM usuario WHERE idUsuario = ?";
