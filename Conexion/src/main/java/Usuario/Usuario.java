@@ -38,6 +38,9 @@ public class Usuario {
     }
     @Override
     public String toString() {
+        return nombre;
+    }
+    public String Imprimir() {
         return "Usuario{" + "idUsuario=" + idUsuario + ", status=" + status + ", nombre=" + nombre + ", password=" + password + ", fechaAlta=" + fechaAlta + '}';
     }
     public int getIdUsuario() {
