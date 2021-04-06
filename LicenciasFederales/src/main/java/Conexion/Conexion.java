@@ -23,12 +23,10 @@ public class Conexion {
     public static void close(Connection conexion) throws SQLException {
         conexion.close();
     }
-    
     public static void close(Connection conexion, Statement declaracion) throws SQLException {
         conexion.close();
         declaracion.close();
-    }
-    
+    } 
     public static void close(Connection conexion, Statement declaracion, ResultSet resultado) throws SQLException {
         conexion.close();
         declaracion.close();
