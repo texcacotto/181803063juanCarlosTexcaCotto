@@ -21,6 +21,20 @@ public class Conductor {
         this.estatus = estatus;
         this.nombre = nombre;
     }
+    public Conductor(int idConductor, int examenMedico, int docRequeridos, String nombre) {
+        this.idConductor = idConductor;
+        this.examenMedico = examenMedico;
+        this.docRequeridos = docRequeridos;
+        this.nombre = nombre;
+    }
+    public Conductor(int examenMedico, int docRequeridos, String nombre) {
+        this.examenMedico = examenMedico;
+        this.docRequeridos = docRequeridos;
+        this.nombre = nombre;
+    }
+    public Conductor(int idConductor) {
+        this.idConductor = idConductor;
+    }
     public Conductor() {
     }
     

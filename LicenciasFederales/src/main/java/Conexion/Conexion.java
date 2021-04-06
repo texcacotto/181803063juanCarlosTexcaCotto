@@ -13,8 +13,7 @@ import java.sql.*;
  */
 public class Conexion {
     
-    private static final String URL = "jdbc:mysql://localhost:3306/licencias_federales?zeroDateTimeBehavior=CONVERT_TO_NULL";
-    private static final String USUARIO = "admin", PASSWORD = "12345";
+    private static final String URL = "jdbc:mysql://localhost:3306/licencias_federales?zeroDateTimeBehavior=CONVERT_TO_NULL", USUARIO = "admin", PASSWORD = "12345";
     
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USUARIO, PASSWORD);
