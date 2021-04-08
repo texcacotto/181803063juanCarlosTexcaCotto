@@ -15,7 +15,7 @@ import java.util.*;
  *
  * @author cotto
  */
-public class Insertar {
+public class InsertarConductor {
     public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nombre:");

@@ -11,10 +11,9 @@ package Licencia;
  */
 public class Licencia {
     
-    private int idLicencia, idConductor, idTipoVehiculo, modalidad; 
-    private String inicioVigencia, finVigencia;
+    private int idLicencia, idConductor, idTipoVehiculo, modalidad, inicioVigencia, finVigencia;
     
-    public Licencia(int idLicencia, int idConductor, int idTipoVehiculo, int modalidad, String inicioVigencia, String finVigencia) {
+    public Licencia(int idLicencia, int idConductor, int idTipoVehiculo, int modalidad, int inicioVigencia, int finVigencia) {
         this.idLicencia = idLicencia;
         this.idConductor = idConductor;
         this.idTipoVehiculo = idTipoVehiculo;
@@ -22,12 +21,24 @@ public class Licencia {
         this.inicioVigencia = inicioVigencia;
         this.finVigencia = finVigencia;
     }
+    public Licencia(int idLicencia, int idConductor, int idTipoVehiculo) {
+        this.idLicencia = idLicencia;
+        this.idConductor = idConductor;
+        this.idTipoVehiculo = idTipoVehiculo;
+    }
+    public Licencia(int idConductor, int idTipoVehiculo) {
+        this.idConductor = idConductor;
+        this.idTipoVehiculo = idTipoVehiculo;
+    }
+    public Licencia(int idLicencia) {
+        this.idLicencia = idLicencia;
+    }
     public Licencia() {
     }
     
     @Override
     public String toString() {
-        return "" + idLicencia;
+        return idLicencia + " > " + inicioVigencia + "-" + finVigencia;
     }
     public String imprimirLicencia() {
         return "Licencia{" + "idLicencia=" + idLicencia + ", idConductor=" + idConductor + ", idTipoVehiculo=" + idTipoVehiculo + ", modalidad=" + modalidad + ", inicioVigencia=" + inicioVigencia + ", finVigencia=" + finVigencia + '}';
@@ -45,10 +56,10 @@ public class Licencia {
     public int getModalidad() {
         return modalidad;
     }
-    public String getInicioVigencia() {
+    public int getInicioVigencia() {
         return inicioVigencia;
     }
-    public String getFinVigencia() {
+    public int getFinVigencia() {
         return finVigencia;
     }
     
@@ -64,10 +75,10 @@ public class Licencia {
     public void setModalidad(int modalidad) {
         this.modalidad = modalidad;
     }
-    public void setInicioVigencia(String inicioVigencia) {
+    public void setInicioVigencia(int inicioVigencia) {
         this.inicioVigencia = inicioVigencia;
     }
-    public void setFinVigencia(String finVigencia) {
+    public void setFinVigencia(int finVigencia) {
         this.finVigencia = finVigencia;
     }
 }

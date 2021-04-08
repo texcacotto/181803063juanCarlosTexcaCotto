@@ -15,7 +15,7 @@ import java.util.*;
  *
  * @author cotto
  */
-public class Consultar {
+public class ConsultarTiposVehiculos {
     public static void main(String[] args) throws SQLException {
         List<TipoVehiculo> tiposVehiculos = new ArrayList<>();
         tiposVehiculos = DaoTipoVehiculo.listaTiposVehiculos();

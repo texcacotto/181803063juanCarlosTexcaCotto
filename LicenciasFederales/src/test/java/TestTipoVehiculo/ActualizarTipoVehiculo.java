@@ -15,9 +15,12 @@ import java.util.*;
  *
  * @author cotto
  */
-public class Insertar {
+public class ActualizarTipoVehiculo {
     public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("ID:");
+        int idTipoVehiculo = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Categoria:");
         String categoria = scanner.nextLine();
         System.out.println("Medio en el que se desplaza:");
@@ -26,7 +29,7 @@ public class Insertar {
         String descripcion = scanner.nextLine();
         System.out.println("Excepciones:");
         String excepciones = scanner.nextLine();
-        TipoVehiculo nuevoTipoVehiculo = new TipoVehiculo(categoria, medioDesplaza, descripcion, excepciones);
-        DaoTipoVehiculo.insertarTipoVehiculo(nuevoTipoVehiculo);
+        TipoVehiculo porActualizar = new TipoVehiculo(idTipoVehiculo, categoria, medioDesplaza, descripcion, excepciones);
+        DaoTipoVehiculo.actualizarTipoVehiculo(porActualizar);
     }
 }

@@ -1,7 +1,7 @@
-package TestConductor;
+package TestLicencia;
 
-import Conductor.Conductor;
-import DaoConductor.DaoConductor;
+import Licencia.Licencia;
+import DaoLicencia.DaoLicencia;
 import java.sql.*;
 import java.util.*;
 
@@ -15,12 +15,12 @@ import java.util.*;
  *
  * @author cotto
  */
-public class Consultar {
+public class ConsultarLicencias {
     public static void main(String[] args) throws SQLException {
-        List<Conductor> conductores = new ArrayList<>();
-        conductores = DaoConductor.listaConductores();
-        for (Conductor conductor : conductores) {
-            System.out.println(conductor);
+        List<Licencia> licencias = new ArrayList<>();
+        licencias = DaoLicencia.listaLicencias();
+        for (Licencia licencia : licencias) {
+            System.out.println(licencia);
         }
     }
 }

@@ -1,7 +1,7 @@
-package TestTipoVehiculo;
+package TestLicencia;
 
-import TipoVehiculo.TipoVehiculo;
-import DaoTipoVehiculo.DaoTipoVehiculo;
+import Licencia.Licencia;
+import DaoLicencia.DaoLicencia;
 import java.sql.*;
 import java.util.*;
 
@@ -15,12 +15,14 @@ import java.util.*;
  *
  * @author cotto
  */
-public class Eliminar {
+public class InsertarLicencia {
     public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("ID:");
+        System.out.println("ID del conductor:");
+        int idConductor = scanner.nextInt();
+        System.out.println("ID del tipo de vehiculo:");
         int idTipoVehiculo = scanner.nextInt();
-        TipoVehiculo porEliminar = new TipoVehiculo(idTipoVehiculo);
-        DaoTipoVehiculo.eliminarTipoVehiculo(porEliminar);
+        Licencia nuevaLicencia = new Licencia(idConductor, idTipoVehiculo);
+        DaoLicencia.insertarLicencia(nuevaLicencia);
     }
 }

@@ -15,7 +15,7 @@ import java.util.*;
  *
  * @author cotto
  */
-public class Actualizar {
+public class ActualizarConductor {
     public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("ID:");
