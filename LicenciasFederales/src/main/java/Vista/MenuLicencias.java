@@ -35,6 +35,7 @@ public class MenuLicencias extends javax.swing.JFrame {
      */
     public MenuLicencias() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         try {
             this.crearModelo();
         }

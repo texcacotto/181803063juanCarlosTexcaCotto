@@ -10,7 +10,7 @@ package Vista;
  * @author cotto
  */
 public class Index extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Index
      */

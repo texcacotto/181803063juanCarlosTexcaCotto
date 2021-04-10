@@ -35,6 +35,7 @@ public class MenuTiposVehiculos extends javax.swing.JFrame {
      */
     public MenuTiposVehiculos() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         try {
             this.crearModelo();
         }

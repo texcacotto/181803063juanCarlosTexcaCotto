@@ -35,6 +35,7 @@ public class MenuConductores extends javax.swing.JFrame {
      */
     public MenuConductores() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         try {
             this.crearModelo();
         }
