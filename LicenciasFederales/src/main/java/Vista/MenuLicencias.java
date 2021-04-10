@@ -31,7 +31,7 @@ public class MenuLicencias extends javax.swing.JFrame {
     }
     
     /**
-     * Creates new form MenuConductores
+     * Creates new form MenuLicencias
      */
     public MenuLicencias() {
         initComponents();
