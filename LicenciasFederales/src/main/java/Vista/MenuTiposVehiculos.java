@@ -5,8 +5,8 @@
  */
 package Vista;
     
-import Conductor.Conductor;
-import DaoConductor.DaoConductor;
+import TipoVehiculo.TipoVehiculo;
+import DaoTipoVehiculo.DaoTipoVehiculo;
 import java.sql.*;
 import java.util.*;
 import java.util.logging.Level;
@@ -17,29 +17,29 @@ import javax.swing.DefaultListModel;
  *
  * @author cotto
  */
-public class MenuConductores extends javax.swing.JFrame {
+public class MenuTiposVehiculos extends javax.swing.JFrame {
     
     DefaultListModel modelo = new DefaultListModel();
     
     private void crearModelo() throws SQLException {
         modelo.clear();
-        List<Conductor> conductores = new ArrayList<>();
-        conductores = DaoConductor.listaConductores();
-        for (Conductor conductor : conductores) {
-            modelo.addElement(conductor);
+        List<TipoVehiculo> tiposVehiculos = new ArrayList<>();
+        tiposVehiculos = DaoTipoVehiculo.listaTiposVehiculos();
+        for (TipoVehiculo tipoVehiculo : tiposVehiculos) {
+            modelo.addElement(tipoVehiculo);
         }
     }
     
     /**
      * Creates new form MenuConductores
      */
-    public MenuConductores() {
+    public MenuTiposVehiculos() {
         initComponents();
         try {
             this.crearModelo();
         }
         catch (SQLException ex) {
-            Logger.getLogger(MenuConductores.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MenuTiposVehiculos.class.getName()).log(Level.SEVERE, null, ex);
         }
         jList1.setModel(modelo);
     }
@@ -67,11 +67,13 @@ public class MenuConductores extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel1.setText("Menú de Conductores");
+        jLabel1.setText("Menú de Tipos de Vehículos");
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -86,16 +88,16 @@ public class MenuConductores extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jList1);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel2.setText("Nombre:");
+        jLabel2.setText("Categoría:");
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel3.setText("Examen médico:");
+        jLabel3.setText("Medio de desplazamiento:");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel4.setText("Documentos requeridos:");
+        jLabel4.setText("Descripción:");
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
-        jLabel5.setText("ID:");
+        jLabel5.setText("Excepciones:");
 
         jButton2.setBackground(new java.awt.Color(51, 51, 51));
         jButton2.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
@@ -117,6 +119,9 @@ public class MenuConductores extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Dialog", 1, 11)); // NOI18N
+        jLabel6.setText("ID:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -124,31 +129,31 @@ public class MenuConductores extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(jLabel1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(jLabel6)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jButton2))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel3)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,15 +174,18 @@ public class MenuConductores extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton2)
                         .addComponent(jButton1))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -195,51 +203,55 @@ public class MenuConductores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String nombre = jTextField1.getText();
-        int examenMedico = Integer.parseInt(jTextField2.getText());
-        int docRequeridos = Integer.parseInt(jTextField3.getText());
-        Conductor nuevoConductor = new Conductor(examenMedico, docRequeridos, nombre);
+        String categoria = jTextField1.getText();
+        String medioDesplaza = jTextField2.getText();
+        String descripcion = jTextField3.getText();
+        String excepciones = jTextField4.getText();
+        TipoVehiculo nuevoTipoVehiculo = new TipoVehiculo(categoria, medioDesplaza, descripcion, excepciones);
         try {
-            DaoConductor.insertarConductor(nuevoConductor);
+            DaoTipoVehiculo.insertarTipoVehiculo(nuevoTipoVehiculo);
         }
         catch (SQLException ex) {
-            Logger.getLogger(MenuConductores.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MenuTiposVehiculos.class.getName()).log(Level.SEVERE, null, ex);
         }
         finally {
             jTextField1.setText("");
             jTextField2.setText("");
             jTextField3.setText("");
+            jTextField4.setText("");
             try {
                 this.crearModelo();
             }
             catch (SQLException ex) {
-                Logger.getLogger(MenuConductores.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuTiposVehiculos.class.getName()).log(Level.SEVERE, null, ex);
             }
             jList1.setModel(modelo);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String nombre = jTextField1.getText();
-        int examenMedico = Integer.parseInt(jTextField2.getText());
-        int docRequeridos = Integer.parseInt(jTextField3.getText());
-        int idConductor = Integer.parseInt(jLabel6.getText());
-        Conductor porActualizar = new Conductor(idConductor, examenMedico, docRequeridos, nombre);
+        String categoria = jTextField1.getText();
+        String medioDesplaza = jTextField2.getText();
+        String descripcion = jTextField3.getText();
+        String excepciones = jTextField4.getText();
+        int idTipoVehiculo = Integer.parseInt(jLabel7.getText());
+        TipoVehiculo porActualizar = new TipoVehiculo(idTipoVehiculo, categoria, medioDesplaza, descripcion, excepciones);
         try {
-            DaoConductor.actualizarConductor(porActualizar);
+            DaoTipoVehiculo.actualizarTipoVehiculo(porActualizar);
         }
         catch (SQLException ex) {
-            Logger.getLogger(MenuConductores.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(MenuTiposVehiculos.class.getName()).log(Level.SEVERE, null, ex);
         }
         finally {
             jTextField1.setText("");
             jTextField2.setText("");
             jTextField3.setText("");
+            jTextField4.setText("");
             try {
                 this.crearModelo();
             }
             catch (SQLException ex) {
-                Logger.getLogger(MenuConductores.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuTiposVehiculos.class.getName()).log(Level.SEVERE, null, ex);
             }
             jList1.setModel(modelo);
         }
@@ -248,33 +260,35 @@ public class MenuConductores extends javax.swing.JFrame {
     private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
          if (evt.getClickCount() == 2) {
             int indice = jList1.getSelectedIndex();
-            Conductor porEliminar = (Conductor)modelo.getElementAt(indice);
+            TipoVehiculo porEliminar = (TipoVehiculo)modelo.getElementAt(indice);
             try {
-                DaoConductor.eliminarConductor(porEliminar);
+                DaoTipoVehiculo.eliminarTipoVehiculo(porEliminar);
             }
             catch (SQLException ex) {
-                Logger.getLogger(MenuConductores.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MenuTiposVehiculos.class.getName()).log(Level.SEVERE, null, ex);
             }
             finally {
                 jTextField1.setText("");
                 jTextField2.setText("");
                 jTextField3.setText("");
+                jTextField4.setText("");
                 try {
                     this.crearModelo();
                 }
                 catch (SQLException ex) {
-                    Logger.getLogger(MenuConductores.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(MenuTiposVehiculos.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 jList1.setModel(modelo);
             }
         }
         else {
             int indice = jList1.getSelectedIndex();
-            Conductor datosConductor = (Conductor)modelo.getElementAt(indice);
-            jTextField1.setText(datosConductor.getNombre());
-            jTextField2.setText(String.valueOf(datosConductor.getExamenMedico()));
-            jTextField3.setText(String.valueOf(datosConductor.getDocRequeridos()));
-            jLabel6.setText("" + datosConductor.getIdConductor());
+            TipoVehiculo datosTipoVehiculo = (TipoVehiculo)modelo.getElementAt(indice);
+            jTextField1.setText(datosTipoVehiculo.getCategoria());
+            jTextField2.setText(datosTipoVehiculo.getMedioDesplaza());
+            jTextField3.setText(datosTipoVehiculo.getDescripcion());
+            jTextField4.setText(datosTipoVehiculo.getExcepciones());
+            jLabel7.setText("" + datosTipoVehiculo.getIdTipoVehiculo());
         }
     }//GEN-LAST:event_jList1MouseClicked
     
@@ -295,20 +309,21 @@ public class MenuConductores extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuConductores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuTiposVehiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuConductores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuTiposVehiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuConductores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuTiposVehiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuConductores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuTiposVehiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuConductores().setVisible(true);
+                new MenuTiposVehiculos().setVisible(true);
             }
         });
     }
@@ -322,11 +337,13 @@ public class MenuConductores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

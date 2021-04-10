@@ -18,11 +18,11 @@ import java.util.*;
 public class InsertarTipoVehiculo {
     public static void main(String[] args) throws SQLException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Categoria:");
+        System.out.println("Categoría:");
         String categoria = scanner.nextLine();
-        System.out.println("Medio en el que se desplaza:");
+        System.out.println("Medio de desplazamiento:");
         String medioDesplaza = scanner.nextLine();
-        System.out.println("Descripcion:");
+        System.out.println("Descripción:");
         String descripcion = scanner.nextLine();
         System.out.println("Excepciones:");
         String excepciones = scanner.nextLine();

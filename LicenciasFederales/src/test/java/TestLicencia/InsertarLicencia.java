@@ -20,7 +20,7 @@ public class InsertarLicencia {
         Scanner scanner = new Scanner(System.in);
         System.out.println("ID del conductor:");
         int idConductor = scanner.nextInt();
-        System.out.println("ID del tipo de vehiculo:");
+        System.out.println("ID del tipo de vehículo:");
         int idTipoVehiculo = scanner.nextInt();
         Licencia nuevaLicencia = new Licencia(idConductor, idTipoVehiculo);
         DaoLicencia.insertarLicencia(nuevaLicencia);

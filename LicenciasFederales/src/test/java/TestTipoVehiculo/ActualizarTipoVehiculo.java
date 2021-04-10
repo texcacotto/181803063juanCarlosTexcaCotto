@@ -21,11 +21,11 @@ public class ActualizarTipoVehiculo {
         System.out.println("ID:");
         int idTipoVehiculo = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Categoria:");
+        System.out.println("Categoría:");
         String categoria = scanner.nextLine();
-        System.out.println("Medio en el que se desplaza:");
+        System.out.println("Medio de desplazamiento:");
         String medioDesplaza = scanner.nextLine();
-        System.out.println("Descripcion:");
+        System.out.println("Descripción:");
         String descripcion = scanner.nextLine();
         System.out.println("Excepciones:");
         String excepciones = scanner.nextLine();

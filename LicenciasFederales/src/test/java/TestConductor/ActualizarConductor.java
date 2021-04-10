@@ -23,7 +23,7 @@ public class ActualizarConductor {
         scanner.nextLine();
         System.out.println("Nombre:");
         String nombre = scanner.nextLine();
-        System.out.println("Examen medico:");
+        System.out.println("Examen médico:");
         int examenMedico = scanner.nextInt();
         System.out.println("Documentos requeridos:");
         int docRequeridos = scanner.nextInt();

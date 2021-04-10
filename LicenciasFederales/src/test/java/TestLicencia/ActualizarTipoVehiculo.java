@@ -20,9 +20,9 @@ public class ActualizarTipoVehiculo {
         Scanner scanner = new Scanner(System.in);
         System.out.println("ID de la licencia:");
         int idLicencia = scanner.nextInt();
-         System.out.println("ID del conductor:");
+        System.out.println("ID del conductor:");
         int idConductor = scanner.nextInt();
-         System.out.println("ID del tipo de vehiculo:");
+        System.out.println("ID del tipo de vehículo:");
         int idTipoVehiculo = scanner.nextInt();
         Licencia porActualizar = new Licencia(idLicencia, idConductor, idTipoVehiculo);
         DaoLicencia.actualizarLicencia(porActualizar);
