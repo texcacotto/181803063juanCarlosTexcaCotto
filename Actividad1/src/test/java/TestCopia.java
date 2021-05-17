@@ -18,7 +18,6 @@ public class TestCopia {
         Autor segundoAutor = new Autor("Carlos Cuauhtemoc Sanchez", "Mexicano", 1964);
         
         Copia primerCopia = new Copia(1, 2015, "El libro de los cinco anillos", "Historia", "Satori", "En biblioteca", primerAutor);
-        
         System.out.println(primerCopia);
     }
 }

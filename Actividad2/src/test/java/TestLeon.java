@@ -14,8 +14,8 @@ public class TestLeon {
     public static void main(String[] args) {
         
         Leon leoncito = new Leon("Selva");
-        
         System.out.println(leoncito);
+        
         System.out.println(Leon.comer());
         System.out.println(Leon.dormir());
         System.out.println(Leon.respirar());
