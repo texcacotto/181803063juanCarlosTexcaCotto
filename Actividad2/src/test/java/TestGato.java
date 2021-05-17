@@ -12,7 +12,9 @@ import Animales.Gato;
  */
 public class TestGato {
     public static void main(String[] args) {
+        
         Gato gatito = new Gato("gato.jpg", "pescado", "pequeño", "ciudad");
+        
         System.out.println(gatito);
         System.out.println(Gato.comer());
         System.out.println(Gato.dormir());
